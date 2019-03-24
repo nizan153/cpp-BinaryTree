@@ -1,3 +1,4 @@
-#Binary Tree - cpp
+# cpp-BinaryTree
 
-**Nitzan Kravzov**
+**by Nitzan Kravzov**
+

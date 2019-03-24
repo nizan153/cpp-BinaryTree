@@ -1,31 +1,35 @@
 #ifndef TREE_H
 #define TREE_H
+#include <iostream>
 
 namespace ariel
 {
-    class Node
-    {
-        private:
-            Node *parent;
+    class Node{
+        public:
+            ~Node();
             Node *left;
             Node *right;
             int data;
-
-        public:
-            Node();
-            Node(int x);
-            ~Node();
-            
+            Node(int i) : data(i), left(NULL), right(NULL) {}
     };
 
     class Tree
     {
-        private: 
-            Node *head;
-            int s;
+        private:
+            Node *head; 
+            int sizeOfTree;
+
+            void deleteTree(Node*);
+            Node* getNode(int);
+            void printPreorder(Node*);
+            void printPostorder(Node*);
+            void printInorder(Node*);
+            void insert(Node*, int);
+            Node* remove(Node*&, int);
+            Node* findMin(Node*);
+            
 
         public:
-
             Tree();
             Tree(int);
             ~Tree();
