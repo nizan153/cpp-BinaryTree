@@ -6,7 +6,6 @@ namespace ariel
 {
     class Node{
         public:
-            ~Node();
             Node *left;
             Node *right;
             int data;
